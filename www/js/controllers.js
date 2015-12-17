@@ -1,16 +1,25 @@
-angular.module('starter.controllers', [])
+(function() {
+  'use strict';
 
-.controller('HomeCtrl', function($scope) {})
+  angular.module('starter.controllers', [])
 
-.controller('SearchCtrl', function($scope) {})
+  .controller('HomeCtrl', EmptyCtrl)
 
-.controller('CameraCtrl', function($scope) {
-})
+  .controller('SearchCtrl', EmptyCtrl)
 
-.controller('MapCtrl', function($scope) {})
+  .controller('CameraCtrl', EmptyCtrl)
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-});
+  .controller('MapCtrl', EmptyCtrl)
+
+  .controller('AccountCtrl', AccountCtrl);
+
+  //////
+
+  function EmptyCtrl($scope) {}
+
+  function AccountCtrl($scope) {
+    $scope.settings = {
+      enableFriends: true
+    };
+  }
+})();
